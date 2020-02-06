@@ -2,8 +2,10 @@ package com.capgemini.banco.bancocapgeminibackend.model.entity;
 
 import javax.persistence.Entity;
 
+import com.capgemini.banco.bancocapgeminibackend.model.dto.ClienteDTO;
+
 @Entity
-public class Cliente extends BaseEntity{
+public class Cliente extends BaseEntity<Cliente, ClienteDTO>{
 
 	private static final long serialVersionUID = -3800460870409603351L;
 
@@ -67,6 +69,18 @@ public class Cliente extends BaseEntity{
 			", email='" + getEmail() + "'" +
 			", conta='" + getConta() + "'" +
 			"}";
+	}
+
+	@Override
+	public ClienteDTO toDTO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cliente fromDTO(ClienteDTO object) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
